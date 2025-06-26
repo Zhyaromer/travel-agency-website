@@ -15,11 +15,11 @@ const AboutPage = () => (
       <p className="text-gray-700 mb-8">
         We value integrity, transparency, and a relentless commitment to customer satisfaction. Our partnerships with top hotels, airlines, and local guides ensure that every journey is safe, comfortable, and enriching. Whether you're planning a family vacation, a romantic getaway, or a solo adventure, we're here to make your travel dreams a reality.
       </p>
-      <h2 className="text-2xl font-semibold text-blue-700 mb-4">Our Mission</h2>
+      <h2 className="text-2xl font-semibold text-yellow-700 mb-4">Our Mission</h2>
       <p className="text-gray-700 mb-8">
         To inspire and enable people to explore the world with ease, comfort, and confidence. We believe travel broadens horizons and brings people together.
       </p>
-      <h2 className="text-2xl font-semibold text-blue-700 mb-4">Meet the Team</h2>
+      <h2 className="text-2xl font-semibold text-yellow-700 mb-4">Meet the Team</h2>
       <ul className="space-y-4">
         <li>
           <span className="font-bold">Sarah Lee</span> – Founder & CEO

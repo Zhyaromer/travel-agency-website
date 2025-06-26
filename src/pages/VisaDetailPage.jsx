@@ -54,7 +54,7 @@ const VisaDetailPage = () => {
           Back to Visa Services
         </Link>
 
-        <div className="relative bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 rounded-3xl p-8 md:p-12 text-white mb-8 overflow-hidden">
+        <div className="relative bg-[#870D13] shadow-2xl rounded-3xl p-8 md:p-12 text-white mb-8 overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full transform translate-x-32 -translate-y-32"></div>
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-5 rounded-full transform -translate-x-24 translate-y-24"></div>
 
@@ -77,7 +77,7 @@ const VisaDetailPage = () => {
                       Available
                     </div>
                   </div>
-                  <p className="text-blue-100 text-xl md:text-2xl font-semibold mb-3">{visa.type}</p>
+                  <p className="text-gray-100 text-xl md:text-2xl font-semibold mb-3">{visa.type}</p>
                 </div>
               </div>
 
@@ -117,13 +117,13 @@ const VisaDetailPage = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-6 text-white shadow-lg">
+          <div className="bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-2xl p-6 text-white shadow-lg">
               <h3 className="text-xl font-bold mb-3">Need Expert Help?</h3>
-              <p className="text-blue-100 mb-6 text-sm leading-relaxed">
+              <p className="text-yellow-100 mb-6 text-sm leading-relaxed">
                 Our visa specialists are ready to guide you through the entire process.
               </p>
               <div className="space-y-3">
-                <button className="w-full bg-white text-blue-600 font-bold py-3 px-4 rounded-xl hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center text-sm">
+                <button className="w-full bg-white text-yellow-600 font-bold py-3 px-4 rounded-xl hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center text-sm">
                   <Phone className="h-4 w-4 mr-2" />
                   Call Expert Now
                 </button>

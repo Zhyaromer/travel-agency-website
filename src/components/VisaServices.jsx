@@ -60,7 +60,7 @@ const VisaServices = () => {
 
   const services = [
     {
-      icon: <FileText className="h-8 w-8 text-blue-600" />,
+      icon: <FileText className="h-8 w-8 text-yellow-600" />,
       title: 'Document Preparation',
       description: 'We help prepare all required documents and forms for your visa application.'
     },
@@ -120,8 +120,8 @@ const VisaServices = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {visaTypes.map((visa) => (
-              <div key={visa.id} className="group relative bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-blue-200 transform hover:-translate-y-2 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div key={visa.id} className="group relative bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-yellow-200 transform hover:-translate-y-2 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative p-8">
                   <div className="flex items-start justify-between mb-6">
                     <div className="flex items-center space-x-4">
@@ -130,7 +130,7 @@ const VisaServices = () => {
                         <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
+                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-yellow-700 transition-colors duration-300">
                           {visa.country}
                         </h3>
                         <p className="text-sm text-gray-500 font-medium uppercase tracking-wide">
@@ -144,8 +144,8 @@ const VisaServices = () => {
                     </div>
                   </div>
 
-                  <div className="text-center mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100">
-                    <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                  <div className="text-center mb-6 p-4 bg-gradient-to-r from-yellow-50 to-yellow-50 rounded-2xl border border-yellow-100">
+                    <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-600">
                       {visa.price}
                     </div>
                     <div className="text-sm text-gray-600 font-medium mt-1">
@@ -154,7 +154,7 @@ const VisaServices = () => {
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
+                    <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-yellow-50 transition-colors duration-300">
                       <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold mb-1">
                         Processing Time
                       </div>
@@ -162,7 +162,7 @@ const VisaServices = () => {
                         {visa.processingTime}
                       </div>
                     </div>
-                    <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
+                    <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-yellow-50 transition-colors duration-300">
                       <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold mb-1">
                         Validity Period
                       </div>
@@ -174,31 +174,31 @@ const VisaServices = () => {
 
                   <Link
                     to={`/visa/${visa.id}`}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 block text-center"
+                    className="w-full bg-[#870D13] hover:bg-[#870D13]/80 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 block text-center"
                   >
-                    Explore More
+                    View Details
                   </Link>
                 </div>
-                <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full opacity-20 transform rotate-45"></div>
-                <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full opacity-20"></div>
+                <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-yellow-100 to-yellow-100 rounded-full opacity-20 transform rotate-45"></div>
+                <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-yellow-100 to-purple-100 rounded-full opacity-20"></div>
               </div>
             ))}
           </div>
           <div className="flex justify-center mt-8">
-            <Link to="/visa-services" className="flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-              Show More
+            <Link to="/visa-services" className="flex items-center bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+              Explore More
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>
 
-        <div className="text-center bg-blue-600 rounded-2xl p-8 text-white">
+        <div className="text-center bg-yellow-600 rounded-2xl p-8 text-white">
           <h3 className="text-2xl font-bold mb-4">Need Help with Your Visa Application?</h3>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-yellow-100 mb-6 max-w-2xl mx-auto">
             Our visa experts are here to guide you through the process. Contact us for personalized assistance
             and ensure your application is submitted correctly the first time.
           </p>
-          <button className="bg-white text-blue-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+          <button className="bg-white text-yellow-600 font-semibold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200">
             Speak with a Visa Expert
           </button>
         </div>

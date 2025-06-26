@@ -118,7 +118,7 @@ const HotelDetailPage = () => {
       <Header />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-        <Link to="/hotels" className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6">
+        <Link to="/hotels" className="inline-flex items-center text-yellow-600 hover:text-yellow-700 mb-6">
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Hotels
         </Link>
@@ -182,13 +182,13 @@ const HotelDetailPage = () => {
           </div>
         </div>
 
-        <div className="bg-blue-600 rounded-2xl p-8 text-center text-white">
+        <div className="bg-yellow-600 rounded-2xl p-8 text-center text-white">
           <h3 className="text-2xl font-bold mb-4">Ready for a Luxurious Stay at {hotel.name}?</h3>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-yellow-100 mb-6 max-w-2xl mx-auto">
             Experience luxury and comfort at {hotel.name}. Contact us for exclusive offers and packages.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-blue-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200">
+            <button className="bg-white text-yellow-600 font-bold py-3 px-8 rounded-lg hover:bg-gray-100 transition-colors duration-200">
               Contact Us
             </button>
           </div>

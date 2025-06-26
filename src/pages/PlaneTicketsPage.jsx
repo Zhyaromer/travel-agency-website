@@ -172,11 +172,11 @@ const PlaneTicketsPage = () => {
     <div className="min-h-screen bg-gray-50">
       <Header />
 
-      <div className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
+      <div className="bg-[#870D13] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Find Your Perfect Flight</h1>
-            <p className="text-xl text-blue-100 mb-8">Discover amazing deals on flights worldwide</p>
+            <p className="text-xl text-gray-100 mb-8">Discover amazing deals on flights worldwide</p>
           </div>
         </div>
       </div>
@@ -184,7 +184,7 @@ const PlaneTicketsPage = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-2xl shadow-lg p-6 mb-8">
           <div className="flex items-center gap-3 mb-6">
-            <Search className="h-6 w-6 text-blue-600" />
+            <Search className="h-6 w-6 text-yellow-600" />
             <h2 className="text-2xl font-bold text-gray-900">Search & Filter</h2>
           </div>
 
@@ -196,7 +196,7 @@ const PlaneTicketsPage = () => {
                 placeholder="Search by airline, from, to..."
                 value={search}
                 onChange={e => setSearch(e.target.value)}
-                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
               />
             </div>
           </div>
@@ -207,7 +207,7 @@ const PlaneTicketsPage = () => {
               <select
                 value={selectedAirline}
                 onChange={e => setSelectedAirline(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
               >
                 <option value="">All Airlines</option>
                 {airlines.map(airline => (
@@ -221,7 +221,7 @@ const PlaneTicketsPage = () => {
               <select
                 value={selectedFrom}
                 onChange={e => setSelectedFrom(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
               >
                 <option value="">All Departures</option>
                 {fromAirports.map(airport => (
@@ -235,7 +235,7 @@ const PlaneTicketsPage = () => {
               <select
                 value={selectedTo}
                 onChange={e => setSelectedTo(e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
               >
                 <option value="">All Destinations</option>
                 {toAirports.map(airport => (
@@ -258,7 +258,7 @@ const PlaneTicketsPage = () => {
               setSelectedTo('');
               setSelectedDate('');
             }}
-            className="text-blue-600 hover:text-blue-700 font-medium"
+            className="text-yellow-600 hover:text-yellow-700 font-medium"
           >
             Clear all filters
           </button>
@@ -294,7 +294,7 @@ const PlaneTicketsPage = () => {
                       />
                       <span className="text-xs text-gray-500 mt-1">{ticket.from.code}</span>
                     </div>
-                    <ArrowRight className="h-5 w-5 text-blue-600" />
+                    <ArrowRight className="h-5 w-5 text-white" />
                     <div className="flex flex-col items-center">
                       <img
                         src={ticket.to.flag}
@@ -306,21 +306,21 @@ const PlaneTicketsPage = () => {
                   </div>
                 </div>
 
-                <div className="text-lg font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">
+                <div className="text-lg font-bold text-gray-900 mb-4 group-hover:text-yellow-700 transition-colors duration-300">
                   {ticket.airline}
                 </div>
 
-                <div className="text-center mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100">
-                  <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                <div className="text-center mb-6 p-4 bg-gradient-to-r from-yellow-50 to-yellow-50 rounded-2xl border border-yellow-100">
+                  <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-600">
                     {ticket.price}
                   </div>
-                  <div className="text-sm text-gray-600 font-medium mt-1">
+                  <div className="text-sm text-gray-600 font-medium mt-1"> 
                     One-way
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
+                  <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-yellow-50 transition-colors duration-300">
                     <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold mb-1">
                       Date
                     </div>
@@ -328,7 +328,7 @@ const PlaneTicketsPage = () => {
                       {ticket.date}
                     </div>
                   </div>
-                  <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
+                  <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-yellow-50 transition-colors duration-300">
                     <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold mb-1">
                       Airline
                     </div>
@@ -340,10 +340,12 @@ const PlaneTicketsPage = () => {
 
                 <Link
                   to={`/plane-ticket/${ticket.id}`}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl transition-colors duration-200 block text-center"
+                  className="w-full bg-[#870D13] hover:bg-[#870D13]/80 text-white font-semibold py-3 px-4 rounded-xl transition-colors duration-200 block text-center"
                 >
-                  Explore More
+                  View Details
                 </Link>
+                 <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-yellow-100 to-yellow-100 rounded-full opacity-20 transform rotate-45"></div>
+                <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-yellow-100 to-purple-100 rounded-full opacity-20"></div>
               </div>
             </div>
           ))}

@@ -100,7 +100,7 @@ const PlaneTicketsPreview = () => {
                     />
                     <span className="text-xs text-gray-500 mt-1">{ticket.from.code}</span>
                   </div>
-                  <ArrowRight className="h-5 w-5 text-blue-600" />
+                  <ArrowRight className="h-5 w-5 text-yellow-600" />
                   <div className="flex flex-col items-center">
                     <img
                       src={ticket.to.flag}
@@ -112,12 +112,12 @@ const PlaneTicketsPreview = () => {
                 </div>
               </div>
 
-              <div className="text-lg font-bold text-gray-900 mb-4 group-hover:text-blue-700 transition-colors duration-300">
+              <div className="text-lg font-bold text-gray-900 mb-4 group-hover:text-yellow-700 transition-colors duration-300">
                 {ticket.airline}
               </div>
 
-              <div className="text-center mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100">
-                <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+              <div className="text-center mb-6 p-4 bg-gradient-to-r from-yellow-50 to-yellow-50 rounded-2xl border border-yellow-100">
+                <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-600">
                   {ticket.price}
                 </div>
                 <div className="text-sm text-gray-600 font-medium mt-1">
@@ -126,7 +126,7 @@ const PlaneTicketsPreview = () => {
               </div>
 
               <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
+                <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-yellow-50 transition-colors duration-300">
                   <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold mb-1">
                     Date
                   </div>
@@ -134,7 +134,7 @@ const PlaneTicketsPreview = () => {
                     {ticket.date}
                   </div>
                 </div>
-                <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
+                <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-yellow-50 transition-colors duration-300">
                   <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold mb-1">
                     Airline
                   </div>
@@ -146,16 +146,16 @@ const PlaneTicketsPreview = () => {
 
               <Link
                 to={`/plane-ticket/${ticket.id}`}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-xl transition-colors duration-200 block text-center"
+                className="w-full bg-[#870D13] hover:bg-[#870D13]/80 text-white font-semibold py-3 px-4 rounded-xl transition-colors duration-200 block text-center"
               >
-                Explore More
+                View Details
               </Link>
             </div>
           </div>
         ))}
       </div>
-      <Link to="/plane-tickets" className="mt-6 flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-        Show More
+      <Link to="/plane-tickets" className="mt-6 flex items-center bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+        Explore More
         <ArrowRight className="ml-2 h-5 w-5" />
       </Link>
     </div>

@@ -111,8 +111,8 @@ const tours = [
 const TourCard = ({ tour }) => (
   <div className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all duration-300 group">
     <div className="relative overflow-hidden">
-      <img 
-        src={tour.image} 
+      <img
+        src={tour.image}
         alt={tour.title}
         className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
       />
@@ -125,29 +125,29 @@ const TourCard = ({ tour }) => (
       </div>
     </div>
     <div className="p-6">
-      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
         {tour.title}
       </h3>
       <div className="flex items-center text-gray-600 mb-2">
-        <MapPin className="h-4 w-4 mr-1" />
+        <MapPin className="h-4 w-4 mr-1 text-red-500" />
         <span className="text-sm">{tour.country}</span>
       </div>
       <div className="mb-2 text-sm text-gray-700">
-        <strong>Hotel:</strong> {tour.hotel}<br/>
+        <strong>Hotel:</strong> {tour.hotel}<br />
         <strong>Transport:</strong> {tour.transport}
       </div>
       <div className="flex flex-wrap gap-2 mb-4">
         {tour.highlights.slice(0, 3).map((highlight, index) => (
-          <span key={index} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+          <span key={index} className="bg-yellow-600 text-white text-xs px-2 py-1 rounded-full">
             {highlight}
           </span>
         ))}
       </div>
-      <Link 
+      <Link
         to={`/tour/${tour.id}`}
-        className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 block text-center"
+        className="w-full bg-[#870D13] hover:bg-[#870D13]/80 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 block text-center"
       >
-        Explore More
+        View Details
       </Link>
     </div>
   </div>
@@ -161,7 +161,7 @@ const Tours = () => (
           Featured International Tours
         </h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-         Let us take you beyond the ordinary. Our travel experts have crafted extraordinary journeys to the world’s most captivating destinations—each tour designed with insider knowledge, seamless service, and moments that turn into lifelong memories. Where will you wander next?
+          Let us take you beyond the ordinary. Our travel experts have crafted extraordinary journeys to the world’s most captivating destinations—each tour designed with insider knowledge, seamless service, and moments that turn into lifelong memories. Where will you wander next?
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -170,8 +170,8 @@ const Tours = () => (
         ))}
       </div>
       <div className="flex justify-center mt-8">
-        <Link to="/tours" className="flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-          Show More
+        <Link to="/tours" className="flex items-center bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+          Explore More
           <ArrowRight className="ml-2 h-5 w-5" />
         </Link>
       </div>

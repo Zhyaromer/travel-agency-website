@@ -117,7 +117,7 @@ const HotelsPage = () => {
         <div className="mb-8">
           <Link 
             to="/"
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4"
+            className="inline-flex items-center text-yellow-600 hover:text-yellow-700 mb-4"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Home
@@ -135,13 +135,13 @@ const HotelsPage = () => {
                 placeholder="Search hotels..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
               />
             </div>
             <select
               value={priceRange}
               onChange={(e) => setPriceRange(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
             >
               <option value="all">All Prices</option>
               <option value="low">Under $400</option>
@@ -151,7 +151,7 @@ const HotelsPage = () => {
             <select
               value={rating}
               onChange={(e) => setRating(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
             >
               <option value="all">All Ratings</option>
               <option value="5">5 Stars</option>
@@ -160,7 +160,7 @@ const HotelsPage = () => {
             <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
             >
               <option value="popular">Most Popular</option>
               <option value="price-low">Price: Low to High</option>
@@ -189,7 +189,7 @@ const HotelsPage = () => {
                     <Star key={i} className="h-4 w-4 fill-current mr-1" />
                   ))}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
                   {hotel.name}
                 </h3>
                 <div className="flex items-center text-gray-600 mb-3">
@@ -201,7 +201,7 @@ const HotelsPage = () => {
                 </p>
                 <Link 
                   to={`/hotel/${hotel.id}`}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 block text-center mt-3"
+                  className="w-full bg-[#870D13] hover:bg-[#870D13]/80 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 block text-center mt-3"
                 >
                   View Details
                 </Link>

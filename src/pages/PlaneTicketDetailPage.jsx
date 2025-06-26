@@ -52,16 +52,16 @@ const PlaneTicketDetailPage = () => {
   return (
     <div>
       <Header />
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-yellow-50 to-yellow-50">
           <div className="mt-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <Link to={'/'} className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium transition-colors duration-200">
+            <Link to={'/'} className="inline-flex items-center text-gray-700 hover:text-gray-800 font-medium transition-colors duration-200">
               <ArrowLeft className="h-5 w-5 mr-2" />
               Back to Flight Search
             </Link>
           </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="relative bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-800 rounded-3xl overflow-hidden mb-8 shadow-2xl">
+          <div className="relative bg-[#870D13] rounded-3xl overflow-hidden mb-8 shadow-2xl">
             <div className="absolute inset-0 opacity-10">
               <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full transform translate-x-48 -translate-y-48"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-white rounded-full transform -translate-x-32 translate-y-32"></div>
@@ -76,7 +76,7 @@ const PlaneTicketDetailPage = () => {
 
                   <div className="mb-4">
                     <h1 className="text-4xl md:text-5xl font-black text-white mb-2">{ticket.airline}</h1>
-                    <div className="flex flex-wrap items-center text-blue-100 mt-4">
+                    <div className="flex flex-wrap items-center text-yellow-100 mt-4">
                       <div className="flex items-center gap-2">
                         <Calendar className="h-5 w-5" />
                         <span className="font-semibold">{ticket.date}</span>
@@ -90,7 +90,7 @@ const PlaneTicketDetailPage = () => {
                         {ticket.from.flag}
                       </div>
                       <div className="text-white">
-                        <div className="text-blue-100 text-sm">{ticket.from.city}</div>
+                        <div className="text-yellow-100 text-sm">{ticket.from.city}</div>
                       </div>
                     </div>
 
@@ -105,7 +105,7 @@ const PlaneTicketDetailPage = () => {
                         {ticket.to.flag}
                       </div>
                       <div className="text-white">
-                        <div className="text-blue-100 text-sm">{ticket.to.city}</div>
+                        <div className="text-yellow-100 text-sm">{ticket.to.city}</div>
                       </div>
                     </div>
                   </div>
@@ -114,7 +114,7 @@ const PlaneTicketDetailPage = () => {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 min-w-[250px]">
                   <div className="text-center">
                     <div className="text-4xl font-black text-white mb-2">{ticket.price}</div>
-                    <div className="text-blue-200 font-medium">One-way</div>
+                    <div className="text-yellow-200 font-medium">One-way</div>
                   </div>
                 </div>
               </div>
@@ -130,13 +130,13 @@ const PlaneTicketDetailPage = () => {
             </div>
           </div>
 
-          <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-8 text-white mt-12 shadow-2xl">
+          <div className="text-center bg-gradient-to-r from-yellow-600 to-yellow-600 rounded-3xl p-8 text-white mt-12 shadow-2xl">
             <h3 className="text-3xl font-bold mb-4">Ready to Fly?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto text-lg">
+            <p className="text-yellow-100 mb-6 max-w-2xl mx-auto text-lg">
               Secure your seat today and enjoy premium travel experience with {ticket.airline}.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 font-bold py-4 px-8 rounded-2xl hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg">
+              <button className="bg-white text-yellow-600 font-bold py-4 px-8 rounded-2xl hover:bg-gray-100 transition-all duration-200 transform hover:scale-105 shadow-lg">
                 Concat Us
               </button>
             </div>

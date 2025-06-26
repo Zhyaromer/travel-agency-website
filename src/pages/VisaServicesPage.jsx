@@ -226,7 +226,7 @@ const VisaServicesPage = () => {
         <div className="mb-8">
           <Link 
             to="/"
-            className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-4"
+            className="inline-flex items-center text-yellow-600 hover:text-yellow-700 mb-4"
           >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Home
@@ -244,14 +244,14 @@ const VisaServicesPage = () => {
                 placeholder="Search countries..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
               />
             </div>
 
             <select
               value={selectedRegion}
               onChange={(e) => setSelectedRegion(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
             >
               {regions.map(region => (
                 <option key={region.id} value={region.id}>{region.name}</option>
@@ -261,7 +261,7 @@ const VisaServicesPage = () => {
             <select
               value={processingTime}
               onChange={(e) => setProcessingTime(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
             >
               <option value="all">All Processing Times</option>
               <option value="fast">Fast (1-2 weeks)</option>
@@ -272,7 +272,7 @@ const VisaServicesPage = () => {
             <select
               value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent"
             >
               <option value="all">All Types</option>
               {visaTypes.map(type => (
@@ -284,8 +284,8 @@ const VisaServicesPage = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredVisas.map((visa) => (
-              <div key={visa.id} className="group relative bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-blue-200 transform hover:-translate-y-2 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div key={visa.id} className="group relative bg-gradient-to-br from-white to-gray-50 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-yellow-200 transform hover:-translate-y-2 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-yellow-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                 <div className="relative p-8">
                   <div className="flex items-start justify-between mb-6">
@@ -295,7 +295,7 @@ const VisaServicesPage = () => {
                         <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-700 transition-colors duration-300">
+                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-yellow-700 transition-colors duration-300">
                           {visa.country}
                         </h3>
                         <p className="text-sm text-gray-500 font-medium uppercase tracking-wide">
@@ -309,8 +309,8 @@ const VisaServicesPage = () => {
                     </div>
                   </div>
 
-                  <div className="text-center mb-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-100">
-                    <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+                  <div className="text-center mb-6 p-4 bg-gradient-to-r from-yellow-50 to-yellow-50 rounded-2xl border border-yellow-100">
+                    <div className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow-600 to-yellow-600">
                       {visa.price}
                     </div>
                     <div className="text-sm text-gray-600 font-medium mt-1">
@@ -319,7 +319,7 @@ const VisaServicesPage = () => {
                   </div>
 
                   <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
+                    <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-yellow-50 transition-colors duration-300">
                       <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold mb-1">
                         Processing Time
                       </div>
@@ -327,7 +327,7 @@ const VisaServicesPage = () => {
                         {visa.processingTime}
                       </div>
                     </div>
-                    <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-blue-50 transition-colors duration-300">
+                    <div className="bg-gray-50 rounded-xl p-4 text-center group-hover:bg-yellow-50 transition-colors duration-300">
                       <div className="text-xs text-gray-500 uppercase tracking-wide font-semibold mb-1">
                         Validity Period
                       </div>
@@ -339,13 +339,13 @@ const VisaServicesPage = () => {
 
                   <Link 
                     to={`/visa/${visa.id}`}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 block text-center"
+                    className="w-full bg-[#870D13] hover:bg-[#870D13]/80 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 block text-center"
                   >
-                    Explore More
+                     View Details
                   </Link>
                 </div>
-                <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full opacity-20 transform rotate-45"></div>
-                <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full opacity-20"></div>
+                <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-yellow-100 to-yellow-100 rounded-full opacity-20 transform rotate-45"></div>
+                <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-yellow-100 to-purple-100 rounded-full opacity-20"></div>
               </div>
           ))}
         </div>
@@ -360,7 +360,7 @@ const VisaServicesPage = () => {
                 setProcessingTime('all');
                 setSelectedType('all');
               }}
-              className="mt-4 text-blue-600 hover:text-blue-700 font-semibold"
+              className="mt-4 text-yellow-600 hover:text-yellow-700 font-semibold"
             >
               Clear all filters
             </button>

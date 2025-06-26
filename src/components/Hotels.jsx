@@ -65,18 +65,18 @@ const Hotels = () => {
     }
   ];
 
-  const getAmenityIcon = (amenity) => {
-    switch (amenity.toLowerCase()) {
-      case 'free wifi':
-        return <Wifi className="h-4 w-4" />;
-      case 'parking':
-        return <Car className="h-4 w-4" />;
-      case 'restaurant':
-        return <Coffee className="h-4 w-4" />;
-      default:
-        return <Users className="h-4 w-4" />;
-    }
-  };
+  // const getAmenityIcon = (amenity) => {
+  //   switch (amenity.toLowerCase()) {
+  //     case 'free wifi':
+  //       return <Wifi className="h-4 w-4" />;
+  //     case 'parking':
+  //       return <Car className="h-4 w-4" />;
+  //     case 'restaurant':
+  //       return <Coffee className="h-4 w-4" />;
+  //     default:
+  //       return <Users className="h-4 w-4" />;
+  //   }
+  // };
 
   return (
     <section id="hotels" className="py-20 bg-white">
@@ -86,7 +86,7 @@ const Hotels = () => {
             Premium Hotel Collection
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-           Indulge in the finest stays, handpicked for their unparalleled luxury and impeccable service. From iconic city retreats to secluded paradise resorts, each property promises extraordinary comfort and unforgettable moments—because where you stay should be just as remarkable as your journey.
+            Indulge in the finest stays, handpicked for their unparalleled luxury and impeccable service. From iconic city retreats to secluded paradise resorts, each property promises extraordinary comfort and unforgettable moments—because where you stay should be just as remarkable as your journey.
           </p>
         </div>
 
@@ -104,28 +104,30 @@ const Hotels = () => {
                 </div>
               </div>
               <div className="p-6 flex flex-col h-full">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
                   {hotel.name}
                 </h3>
                 <div className="flex items-center text-gray-500 mb-2">
-                  <MapPin className="h-5 w-5 mr-2" />
+                  <MapPin className="h-5 w-5 mr-2 text-red-500" />
                   <span className="text-base">{hotel.location}</span>
                 </div>
                 <p className="text-gray-600 text-base mb-4 line-clamp-2">
                   {hotel.description}
                 </p>
-                <Link to={`/hotel/${hotel.id}`} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 text-center">
-                  Explore More
+                <Link to={`/hotel/${hotel.id}`} className="w-full bg-[#870D13] hover:bg-[#870D13]/80 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 text-center">
+                  view details
                 </Link>
               </div>
             </div>
           ))}
         </div>
         <div className="flex justify-center mt-8">
-          <Link to="/hotels" className="flex items-center bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-            Show More
+          <Link to="/hotels" className="flex items-center bg-yellow-600 hover:bg-yellow-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
+            Explore More
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
+          <div className="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-yellow-100 to-yellow-100 rounded-full opacity-20 transform rotate-45"></div>
+          <div className="absolute bottom-4 left-4 w-12 h-12 bg-gradient-to-br from-yellow-100 to-purple-100 rounded-full opacity-20"></div>
         </div>
       </div>
     </section>

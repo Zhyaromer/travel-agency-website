@@ -14,7 +14,7 @@ export default function TourDetailPage ()  {
       duration: '7 Days',
       price: '$2,899',
       images: [
-        'https://images.pexels.com/photos/161853/eiffel-tower-france-landmark-tower-161853.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
+        'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
         'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
         'https://images.pexels.com/photos/1461974/pexels-photo-1461974.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
         'https://images.pexels.com/photos/2363/france-landmark-lights-night.jpg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
@@ -80,7 +80,7 @@ export default function TourDetailPage ()  {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link 
           to="/tours"
-          className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-6"
+          className="inline-flex items-center text-yellow-600 hover:text-yellow-700 mb-6"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Tours
@@ -124,7 +124,7 @@ export default function TourDetailPage ()  {
               <h1 className="text-4xl font-bold text-gray-900 mb-4">{tour.title}</h1>
               
               <div className="flex items-center text-gray-600 mb-6">
-                <MapPin className="h-5 w-5 mr-2" />
+                <MapPin className="h-5 w-5 mr-2 text-red-500" />
                 <span>{tour.country}</span>
               </div>
 
@@ -139,24 +139,24 @@ export default function TourDetailPage ()  {
 
             <div className="grid grid-cols-2 gap-4 p-6 bg-gray-50 rounded-xl">
               <div className="flex items-center">
-                <Clock className="h-5 w-5 text-blue-600 mr-3" />
+                <Clock className="h-5 w-5 text-yellow-600 mr-3" />
                 <div>
                   <div className="font-semibold text-gray-900">Duration</div>
                   <div className="text-gray-600">{tour.duration}</div>
                 </div>
               </div>
               <div className="flex items-center">
-                <Calendar className="h-5 w-5 text-blue-600 mr-3" />
+                <Calendar className="h-5 w-5 text-yellow-600 mr-3" />
                 <div>
                   <div className="font-semibold text-gray-900">Next Departure</div>
                   <div className="text-gray-600">March 15, 2025</div>
                 </div>
               </div>
               <div className="flex items-center">
-                <DollarSign className="h-5 w-5 text-blue-600 mr-3" />
+                <DollarSign className="h-5 w-5 text-yellow-600 mr-3" />
                 <div>
                   <div className="font-semibold text-gray-900">Price</div>
-                  <div className="text-2xl font-bold text-blue-600">{tour.price}</div>
+                  <div className="text-2xl font-bold text-yellow-600">{tour.price}</div>
                 </div>
               </div>
             </div>
@@ -167,7 +167,7 @@ export default function TourDetailPage ()  {
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Tour Highlights</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {tour.highlights.map((highlight, index) => (
-              <div key={index} className="bg-blue-50 text-blue-800 px-4 py-2 rounded-lg text-center font-medium">
+              <div key={index} className="bg-yellow-50 text-yellow-800 px-4 py-2 rounded-lg text-center font-medium">
                 {highlight}
               </div>
             ))}
@@ -194,7 +194,7 @@ export default function TourDetailPage ()  {
             {tour.itinerary.map((day, index) => (
               <div key={index} className="border border-gray-200 rounded-xl p-6 hover:shadow-md transition-shadow">
                 <div className="flex items-start">
-                  <div className="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">
+                  <div className="bg-yellow-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 flex-shrink-0">
                     {day.day}
                   </div>
                   <div>
@@ -207,13 +207,13 @@ export default function TourDetailPage ()  {
           </div>
         </div> */}
 
-        <div className="bg-blue-600 rounded-2xl p-8 text-center text-white">
+        <div className="bg-yellow-600 rounded-2xl p-8 text-center text-white">
           <h3 className="text-2xl font-bold mb-4">Ready to Experience Paris?</h3>
-          <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+          <p className="text-yellow-100 mb-6 max-w-2xl mx-auto">
             Join us on this unforgettable journey through the City of Light. Limited spots available for our next departure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-blue-600 transition-colors duration-200">
+            <button className="border-2 border-white text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-yellow-600 transition-colors duration-200">
               Contact Us
             </button>
           </div>

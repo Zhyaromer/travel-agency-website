@@ -45,7 +45,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative">
               <Plane 
-                className="h-16 w-16 text-blue-600 transform rotate-45 transition-all duration-1000"
+                className="h-16 w-16 text-yellow-600 transform rotate-45 transition-all duration-1000"
                 style={{
                   filter: 'drop-shadow(0 4px 12px rgba(59, 130, 246, 0.3))',
                   animation: 'fly 3s ease-in-out infinite'
@@ -62,7 +62,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
           {[...Array(3)].map((_, i) => (
             <div
               key={i}
-              className="w-2 h-2 bg-blue-500 rounded-full"
+              className="w-2 h-2 bg-yellow-500 rounded-full"
               style={{
                 animation: `bounce 1.4s ease-in-out infinite both`,
                 animationDelay: `${i * 0.16}s`
