@@ -15,7 +15,7 @@ const LoadingScreen = ({ onLoadingComplete }) => {
 
   return (
     <div className="fixed inset-0 bg-gradient-to-br from-sky-100 to-blue-200 flex items-center justify-center z-50 overflow-hidden">
-      
+
       <div className="absolute inset-0">
         {[...Array(8)].map((_, i) => (
           <div
@@ -35,25 +35,24 @@ const LoadingScreen = ({ onLoadingComplete }) => {
 
       <div className="relative z-10 text-center">
         <div className="mb-16">
-          <h1 className="text-5xl font-thin text-slate-800 mb-2 tracking-wider">
+          <h1 className="text-5xl font-bold text-slate-800 mb-2 tracking-wider">
             Royal Trip
           </h1>
-          <div className="w-24 h-px bg-slate-400 mx-auto"></div>
         </div>
 
         <div className="relative h-32 mb-16">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative">
-              <Plane 
+              <Plane
                 className="h-16 w-16 text-yellow-600 transform rotate-45 transition-all duration-1000"
                 style={{
                   filter: 'drop-shadow(0 4px 12px rgba(59, 130, 246, 0.3))',
                   animation: 'fly 3s ease-in-out infinite'
                 }}
               />
-              
+
               <div className="absolute top-1/2 right-full w-32 h-px bg-gradient-to-r from-transparent to-blue-300 opacity-60 transform -translate-y-1/2"
-                   style={{ animation: 'trail 3s ease-in-out infinite' }} />
+                style={{ animation: 'trail 3s ease-in-out infinite' }} />
             </div>
           </div>
         </div>

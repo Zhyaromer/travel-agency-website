@@ -48,7 +48,7 @@ const VisaDetailPage = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link
           to="/visa-services"
-          className="inline-flex items-center text-blue-600 hover:text-blue-700 mb-8 bg-white px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all duration-200"
+          className="inline-flex items-center text-yellow-600 hover:text-yellow-700 mb-8 px-4 py-2 rounded-full transition-all duration-200"
         >
           <ArrowLeft className="h-4 w-4 mr-2" />
           Back to Visa Services
@@ -59,8 +59,8 @@ const VisaDetailPage = () => {
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white opacity-5 rounded-full transform -translate-x-24 translate-y-24"></div>
 
           <div className="relative z-10">
-            <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
-              <div className="flex items-start gap-8">
+            <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between gap-8">
+              <div className="flex flex-col-reverse md:flex-row items-start gap-8">
                 <div className="relative">
                   <div className="bg-white p-3 rounded-2xl shadow-2xl">
                     <SvgFlag country={visa.country} size={80} />
@@ -81,7 +81,7 @@ const VisaDetailPage = () => {
                 </div>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 min-w-[250px]">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border text-center border-white/20 min-w-[250px]">
                 <div className="text-center">
                   <div className="text-4xl font-black text-white mb-2">{visa.price}</div>
                   <div className="text-blue-200 font-medium">Processing Fee</div>

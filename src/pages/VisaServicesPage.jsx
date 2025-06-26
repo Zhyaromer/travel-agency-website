@@ -314,7 +314,7 @@ const VisaServicesPage = () => {
                       {visa.price}
                     </div>
                     <div className="text-sm text-gray-600 font-medium mt-1">
-                      Government + Processing Fee
+                     Processing Fee
                     </div>
                   </div>
 

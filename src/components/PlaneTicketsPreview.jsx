@@ -61,7 +61,7 @@ const tickets = [
 const PlaneTicketsPreview = () => {
   return (
     <div className="my-12 max-w-7xl flex flex-col justify-center items-center mx-auto">
-      <div className="text-center mb-16">
+      <div className="text-center mb-16 w-max-3xl px-4">
         <h2 className="text-4xl font-bold text-gray-900 mb-4">
           Featured Plane Tickets
         </h2>

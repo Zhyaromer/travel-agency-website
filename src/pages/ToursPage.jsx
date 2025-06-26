@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Clock, Star, MapPin, ArrowLeft, Search } from 'lucide-react';
+import { Clock, MapPin, ArrowLeft, Search } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -20,7 +20,7 @@ const ToursPage = () => {
         duration: '7 Days',
         price: 2899,
         priceDisplay: '$2,899',
-        image: 'https://images.pexels.com/photos/161853/eiffel-tower-france-landmark-tower-161853.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+        image: 'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
         highlights: ['Eiffel Tower', 'Louvre Museum', 'Seine River Cruise', 'Montmartre'],
         description: 'Experience the romance and elegance of Paris with visits to iconic landmarks, world-class museums, and charming neighborhoods.'
       },
@@ -262,18 +262,12 @@ const ToursPage = () => {
               </div>
               
               <div className="p-6">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="flex items-center text-yellow-500 text-sm">
-                    <Star className="h-4 w-4 fill-current mr-1" />
-                  </div>
-                </div>
-                
                 <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-yellow-600 transition-colors">
                   {tour.title}
                 </h3>
                 
                 <div className="flex items-center text-gray-600 mb-3">
-                  <MapPin className="h-4 w-4 mr-1" />
+                  <MapPin className="h-4 w-4 mr-1 text-red-500" />
                   <span className="text-sm">{tour.location}</span>
                 </div>
 

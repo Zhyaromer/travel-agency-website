@@ -54,7 +54,7 @@ const PlaneTicketDetailPage = () => {
       <Header />
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-yellow-50 to-yellow-50">
           <div className="mt-4 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-            <Link to={'/'} className="inline-flex items-center text-gray-700 hover:text-gray-800 font-medium transition-colors duration-200">
+            <Link to={'/'} className="inline-flex items-center text-yellow-600 hover:text-yellow-700 font-medium transition-colors duration-200">
               <ArrowLeft className="h-5 w-5 mr-2" />
               Back to Flight Search
             </Link>
@@ -84,7 +84,7 @@ const PlaneTicketDetailPage = () => {
                     </div>
                   </div>
 
-                  <div className="flex flex-col sm:flex-row items-center gap-6 mt-10">
+                  <div className="flex flex-row justify-center md:justify-start items-center gap-6 mt-10">
                     <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
                       <div className="flex-shrink-0">
                         {ticket.from.flag}
