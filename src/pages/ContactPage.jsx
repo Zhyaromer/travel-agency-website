@@ -1,6 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
+import { Mail, Phone, MapPin, Facebook, Linkedin, Instagram } from 'lucide-react';
 import { useState } from 'react';
 
 const ContactPage = () => {
@@ -23,14 +23,26 @@ const ContactPage = () => {
         <h1 className="text-4xl font-bold text-gray-900 mb-6">Contact Us</h1>
         <p className="text-lg text-gray-700 mb-8">We'd love to hear from you! Fill out the form below or reach us directly.</p>
         <div className="mb-8 space-y-4">
-          <div className="flex items-center gap-2 text-gray-700"><Phone className="h-5 w-5 text-yellow-600" /> +1 (555) 123-4567</div>
-          <div className="flex items-center gap-2 text-gray-700"><Mail className="h-5 w-5 text-yellow-600" /> info@Royal Trip.com</div>
-          <div className="flex items-center gap-2 text-gray-700"><MapPin className="h-5 w-5 text-yellow-600" /> 123 Travel Street, Adventure City, AC 12345</div>
+          <div className="flex flex-col justify-start items-start gap-2">
+            <div className='flex flex-row items-center gap-2'>
+              <Phone className="h-5 w-5 text-yellow-400" />
+              <span dir='ltr' className="text-black">0773 519 9595</span>
+            </div>
+            <div className='flex flex-row items-center gap-2'>
+              <Phone className="h-5 w-5 text-yellow-400" />
+              <span dir='ltr' className="text-black">0773 507 9797</span>
+            </div>
+            <div className='flex flex-row items-center gap-2'>
+              <Phone className="h-5 w-5 text-yellow-400" />
+              <span dir='ltr' className="text-black">0773 222 4000</span>
+            </div>
+          </div>
+          <div className="flex items-center gap-2 text-gray-700"><Mail className="h-5 w-5 text-yellow-600" />royal.trip21@gmail.com</div>
+          <div className="flex items-center gap-2 text-gray-700"><MapPin className="h-5 w-5 text-yellow-600" /> Slemani Ashti  Infront of Blnd School</div>
           <div className="flex gap-4 pt-2">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><Facebook className="h-6 w-6 text-gray-400 hover:text-yellow-600 transition-colors" /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><Twitter className="h-6 w-6 text-gray-400 hover:text-yellow-600 transition-colors" /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><Instagram className="h-6 w-6 text-gray-400 hover:text-yellow-600 transition-colors" /></a>
-            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer"><Youtube className="h-6 w-6 text-gray-400 hover:text-yellow-600 transition-colors" /></a>
+            <a href="https://www.facebook.com/royaltrip2021" target="_blank" rel="noopener noreferrer"><Facebook className="h-6 w-6 text-gray-400 hover:text-yellow-600 transition-colors" /></a>
+            <a href="https://www.linkedin.com/company/royal-trip-travel/" target="_blank" rel="noopener noreferrer"><Linkedin className="h-6 w-6 text-gray-400 hover:text-yellow-600 transition-colors" /></a>
+            <a href="https://www.instagram.com/royal.trip.travel/" target="_blank" rel="noopener noreferrer"><Instagram className="h-6 w-6 text-gray-400 hover:text-yellow-600 transition-colors" /></a>
           </div>
         </div>
         {submitted ? (
