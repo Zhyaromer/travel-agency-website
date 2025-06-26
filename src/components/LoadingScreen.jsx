@@ -1,99 +1,114 @@
 import { useEffect, useState } from 'react';
-import { Plane, Globe, MapPin } from 'lucide-react';
+import { Plane } from 'lucide-react';
 
 const LoadingScreen = ({ onLoadingComplete }) => {
-  const [progress, setProgress] = useState(0);
-  const [currentText, setCurrentText] = useState(0);
-
-  const loadingTexts = [
-    "Discovering amazing destinations...",
-    "Preparing your travel experience...",
-    "Loading premium tours...",
-    "Almost ready for takeoff..."
-  ];
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const progressInterval = setInterval(() => {
-      setProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(progressInterval);
-          setTimeout(onLoadingComplete, 500);
-          return 100;
-        }
-        return prev + 2;
-      });
-    }, 50);
+    const timer = setTimeout(() => {
+      setIsLoaded(true);
+      setTimeout(onLoadingComplete, 10);
+    }, 30);
 
-    const textInterval = setInterval(() => {
-      setCurrentText(prev => (prev + 1) % loadingTexts.length);
-    }, 1);
-
-    return () => {
-      clearInterval(progressInterval);
-      clearInterval(textInterval);
-    };
+    return () => clearTimeout(timer);
   }, [onLoadingComplete]);
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-600 flex items-center justify-center z-50">
-      <div className="text-center text-white">
-        <div className="relative mb-8">
-          <div className="flex items-center justify-center space-x-4 mb-4">
+    <div className="fixed inset-0 bg-gradient-to-br from-sky-100 to-blue-200 flex items-center justify-center z-50 overflow-hidden">
+      
+      <div className="absolute inset-0">
+        {[...Array(8)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute bg-white rounded-full opacity-60"
+            style={{
+              width: `${60 + Math.random() * 40}px`,
+              height: `${30 + Math.random() * 20}px`,
+              left: `${Math.random() * 120 - 20}%`,
+              top: `${Math.random() * 100}%`,
+              animation: `drift ${15 + Math.random() * 10}s linear infinite`,
+              animationDelay: `${Math.random() * 5}s`
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="relative z-10 text-center">
+        <div className="mb-16">
+          <h1 className="text-5xl font-thin text-slate-800 mb-2 tracking-wider">
+            Royal Trip
+          </h1>
+          <div className="w-24 h-px bg-slate-400 mx-auto"></div>
+        </div>
+
+        <div className="relative h-32 mb-16">
+          <div className="absolute inset-0 flex items-center justify-center">
             <div className="relative">
-              <Plane className="h-16 w-16 text-yellow-400 animate-bounce" />
-              <div className="absolute -top-2 -right-2">
-                <Globe className="h-6 w-6 text-white animate-spin" />
-              </div>
+              <Plane 
+                className="h-16 w-16 text-blue-600 transform rotate-45 transition-all duration-1000"
+                style={{
+                  filter: 'drop-shadow(0 4px 12px rgba(59, 130, 246, 0.3))',
+                  animation: 'fly 3s ease-in-out infinite'
+                }}
+              />
+              
+              <div className="absolute top-1/2 right-full w-32 h-px bg-gradient-to-r from-transparent to-blue-300 opacity-60 transform -translate-y-1/2"
+                   style={{ animation: 'trail 3s ease-in-out infinite' }} />
             </div>
           </div>
-          <h1 className="text-4xl font-bold mb-2">Wanderlust</h1>
-          <p className="text-blue-200 text-lg">Premium Travel Agency</p>
         </div>
 
-        <div className="mb-8">
-          <div className="flex justify-center space-x-2 mb-4">
-            {[...Array(3)].map((_, i) => (
-              <div
-                key={i}
-                className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse"
-                style={{ animationDelay: `${i * 0.2}s` }}
-              />
-            ))}
-          </div>
-          
-          <div className="w-80 bg-blue-700 rounded-full h-2 mb-4 mx-auto">
-            <div 
-              className="bg-gradient-to-r from-yellow-400 to-yellow-500 h-2 rounded-full transition-all duration-300 ease-out"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          
-          <p className="text-blue-200 text-sm mb-2">{progress}% Complete</p>
-        </div>
-
-        <div className="h-6">
-          <p className="text-white text-lg animate-pulse">
-            {loadingTexts[currentText]}
-          </p>
-        </div>
-
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(6)].map((_, i) => (
-            <MapPin
+        <div className="flex justify-center space-x-2">
+          {[...Array(3)].map((_, i) => (
+            <div
               key={i}
-              className="absolute text-blue-300 opacity-20 animate-float"
+              className="w-2 h-2 bg-blue-500 rounded-full"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 3}s`,
-                animationDuration: `${3 + Math.random() * 2}s`
+                animation: `bounce 1.4s ease-in-out infinite both`,
+                animationDelay: `${i * 0.16}s`
               }}
             />
           ))}
         </div>
       </div>
+
+      <style>{`
+        @keyframes drift {
+          from { transform: translateX(-100px); }
+          to { transform: translateX(calc(100vw + 100px)); }
+        }
+        
+        @keyframes fly {
+          0%, 100% { 
+            transform: rotate(45deg) translateY(0px) scale(1);
+          }
+          50% { 
+            transform: rotate(45deg) translateY(-8px) scale(1.05);
+          }
+        }
+        
+        @keyframes trail {
+          0%, 100% { 
+            opacity: 0.3;
+            width: 2rem;
+          }
+          50% { 
+            opacity: 0.6;
+            width: 4rem;
+          }
+        }
+        
+        @keyframes bounce {
+          0%, 80%, 100% {
+            transform: scale(0);
+          }
+          40% {
+            transform: scale(1);
+          }
+        }
+      `}</style>
     </div>
   );
 };
 
-export default LoadingScreen; 
+export default LoadingScreen;

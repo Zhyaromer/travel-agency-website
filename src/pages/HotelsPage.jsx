@@ -13,7 +13,6 @@ const hotels = [
     price: 650,
     priceDisplay: '$650',
     image: 'https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-    amenities: ['Free WiFi', 'Parking', 'Restaurant', 'Spa', 'Pool'],
     description: 'Luxury hotel in the heart of Paris with stunning city views'
   },
   {
@@ -24,7 +23,6 @@ const hotels = [
     price: 580,
     priceDisplay: '$580',
     image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-    amenities: ['Free WiFi', 'Restaurant', 'Spa', 'Fitness Center'],
     description: 'Contemporary luxury with traditional Japanese hospitality'
   },
   {
@@ -35,7 +33,6 @@ const hotels = [
     price: 420,
     priceDisplay: '$420',
     image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-    amenities: ['Free WiFi', 'Beach Access', 'Pool', 'Spa', 'Restaurant'],
     description: 'Tropical paradise with private beach and luxury amenities'
   },
   {
@@ -46,7 +43,6 @@ const hotels = [
     price: 350,
     priceDisplay: '$350',
     image: 'https://images.pexels.com/photos/6138086/pexels-photo-6138086.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-    amenities: ['Game Drives', 'Restaurant', 'Bar', 'Cultural Tours'],
     description: 'Authentic safari experience with luxury tented accommodation'
   },
   {
@@ -57,7 +53,6 @@ const hotels = [
     price: 480,
     priceDisplay: '$480',
     image: 'https://images.pexels.com/photos/2413613/pexels-photo-2413613.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-    amenities: ['Mountain Views', 'Restaurant', 'Spa', 'Guided Tours'],
     description: 'Historic hotel with direct access to Machu Picchu'
   },
   {
@@ -68,7 +63,6 @@ const hotels = [
     price: 320,
     priceDisplay: '$320',
     image: 'https://images.pexels.com/photos/2166473/pexels-photo-2166473.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-    amenities: ['Aurora Views', 'Hot Tub', 'Restaurant', 'Observatory'],
     description: 'Perfect for Northern Lights viewing with luxury comfort'
   }
 ];
@@ -205,14 +199,6 @@ const HotelsPage = () => {
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">
                   {hotel.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {hotel.amenities.slice(0, 3).map((amenity, index) => (
-                    <span key={index} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full flex items-center">
-                      {getAmenityIcon(amenity)}
-                      <span className="ml-1">{amenity}</span>
-                    </span>
-                  ))}
-                </div>
                 <Link 
                   to={`/hotel/${hotel.id}`}
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 block text-center mt-3"

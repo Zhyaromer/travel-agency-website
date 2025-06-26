@@ -8,7 +8,6 @@ const tickets = [
     id: 1,
     airline: 'Emirates',
     from: {
-      code: 'DXB',
       name: 'Dubai International Airport',
       country: 'United Arab Emirates',
       city: 'Dubai',
@@ -22,7 +21,6 @@ const tickets = [
       )
     },
     to: {
-      code: 'JFK',
       name: 'John F. Kennedy International Airport',
       country: 'United States',
       city: 'New York',
@@ -41,26 +39,11 @@ const tickets = [
       image: 'https://images.pexels.com/photos/325812/pexels-photo-325812.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     date: '2024-08-15',
-    time: '14:30',
-    duration: '15h 45m',
     price: '$1,850',
     originalPrice: '$2,150',
     status: 'Available',
-    rating: 4.8,
-    stops: 'Direct',
-    aircraft: 'Boeing 777-300ER',
-    class: 'Economy',
     description: 'Experience luxury travel with Emirates premium service. Direct flight from Dubai to New York with world-class amenities, award-winning entertainment system, and exceptional comfort.'
   }
-];
-
-const tips = [
-  'Book 6-8 weeks in advance for best prices',
-  'Use flexible dates to save up to 30%',
-  'Check baggage weight limits before packing',
-  'Arrive 3 hours early for international flights',
-  'Download airline app for real-time updates',
-  'Consider travel insurance for peace of mind'
 ];
 
 const PlaneTicketDetailPage = () => {
@@ -90,13 +73,23 @@ const PlaneTicketDetailPage = () => {
             <div className="relative z-10 p-8 md:p-12">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                 <div className="lg:col-span-8">
-                  <div className="flex flex-col sm:flex-row items-center gap-6 mb-6">
+
+                  <div className="mb-4">
+                    <h1 className="text-4xl md:text-5xl font-black text-white mb-2">{ticket.airline}</h1>
+                    <div className="flex flex-wrap items-center text-blue-100 mt-4">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="h-5 w-5" />
+                        <span className="font-semibold">{ticket.date}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row items-center gap-6 mt-10">
                     <div className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20">
                       <div className="flex-shrink-0">
                         {ticket.from.flag}
                       </div>
                       <div className="text-white">
-                        <div className="text-2xl font-bold">{ticket.from.code}</div>
                         <div className="text-blue-100 text-sm">{ticket.from.city}</div>
                       </div>
                     </div>
@@ -112,26 +105,7 @@ const PlaneTicketDetailPage = () => {
                         {ticket.to.flag}
                       </div>
                       <div className="text-white">
-                        <div className="text-2xl font-bold">{ticket.to.code}</div>
                         <div className="text-blue-100 text-sm">{ticket.to.city}</div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="mb-4">
-                    <h1 className="text-4xl md:text-5xl font-black text-white mb-2">{ticket.airline}</h1>
-                    <div className="flex flex-wrap items-center gap-4 text-blue-100">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="h-5 w-5" />
-                        <span className="font-semibold">{ticket.date}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Clock className="h-5 w-5" />
-                        <span className="font-semibold">{ticket.time} • {ticket.duration}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Plane className="h-5 w-5" />
-                        <span className="font-semibold">{ticket.stops}</span>
                       </div>
                     </div>
                   </div>
@@ -147,57 +121,11 @@ const PlaneTicketDetailPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
             <div className="lg:col-span-2 space-y-8">
               <div className="bg-white rounded-3xl p-8 shadow-sm">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Flight Details</h2>
                 <p className="text-gray-700 leading-relaxed mb-6">{ticket.description}</p>
-
-                <div className="bg-gray-50 rounded-2xl p-6">
-                  <h3 className="font-bold text-gray-900 mb-4">Flight Route</h3>
-                  <div className="flex items-center justify-between">
-                    <div className="text-center">
-                      <div className="flex items-center justify-center gap-2 mb-2">
-                        {ticket.from.flag}
-                        <span className="font-bold text-lg">{ticket.from.code}</span>
-                      </div>
-                      <div className="text-sm text-gray-600">{ticket.from.name}</div>
-                      <div className="text-xs text-gray-500">{ticket.from.country}</div>
-                    </div>
-
-                    <div className="flex items-center gap-4 px-4">
-                      <div className="w-16 h-0.5 bg-gray-300"></div>
-                      <Plane className="h-6 w-6 text-blue-600" />
-                      <div className="w-16 h-0.5 bg-gray-300"></div>
-                    </div>
-
-                    <div className="text-center">
-                      <div className="flex items-center justify-center gap-2 mb-2">
-                        {ticket.to.flag}
-                        <span className="font-bold text-lg">{ticket.to.code}</span>
-                      </div>
-                      <div className="text-sm text-gray-600">{ticket.to.name}</div>
-                      <div className="text-xs text-gray-500">{ticket.to.country}</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-6">
-              <div className="bg-gradient-to-br from-amber-50 to-orange-50 border border-amber-200 rounded-3xl p-6 shadow-sm">
-                <div className="flex items-center mb-4">
-                  <AlertCircle className="h-6 w-6 text-amber-600 mr-3" />
-                  <h3 className="font-bold text-amber-800 text-lg">Pro Tips</h3>
-                </div>
-                <ul className="space-y-3">
-                  {tips.map((tip, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <Check className="h-4 w-4 text-amber-600 mt-1 flex-shrink-0" />
-                      <span className="text-amber-800 text-sm leading-relaxed">{tip}</span>
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           </div>

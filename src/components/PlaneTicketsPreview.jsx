@@ -6,84 +6,76 @@ const tickets = [
     id: 1,
     airline: 'Emirates',
     from: {
-      code: 'DXB',
-      name: 'Dubai International Airport',
+      code: 'Dubai',
       country: 'United Arab Emirates',
-      flag: 'https://flagcdn.com/w40/ae.png',
-      flagEmoji: '🇦🇪'
+      flag: 'https://flagcdn.com/w40/ae.png'
     },
     to: {
-      code: 'JFK',
-      name: 'John F. Kennedy International Airport',
+      code: 'New York',
       country: 'United States',
       flag: 'https://flagcdn.com/w40/us.png',
-      flagEmoji: '🇺🇸',
       image: 'https://images.pexels.com/photos/325812/pexels-photo-325812.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     date: '2024-08-15',
     price: '$1,850',
     status: 'Available',
-    description: 'Direct flight from Dubai to New York with Emirates. Comfortable seating and premium service.'
   },
   {
     id: 2,
     airline: 'Qatar Airways',
     from: {
       code: 'DOH',
-      name: 'Hamad International Airport',
       country: 'Qatar',
       flag: 'https://flagcdn.com/w40/qa.png',
-      flagEmoji: '🇶🇦'
     },
     to: {
       code: 'LHR',
-      name: 'London Heathrow Airport',
       country: 'United Kingdom',
       flag: 'https://flagcdn.com/w40/gb.png',
-      flagEmoji: '🇬🇧',
       image: 'https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     date: '2024-09-02',
     price: '$650',
     status: 'Available',
-    description: 'Non-stop flight from Doha to London with Qatar Airways. Modern aircraft and great value.'
   },
   {
     id: 3,
     airline: 'Singapore Airlines',
     from: {
       code: 'SIN',
-      name: 'Singapore Changi Airport',
       country: 'Singapore',
       flag: 'https://flagcdn.com/w40/sg.png',
-      flagEmoji: '🇸🇬'
     },
     to: {
       code: 'LHR',
-      name: 'London Heathrow Airport',
       country: 'United Kingdom',
       flag: 'https://flagcdn.com/w40/gb.png',
-      flagEmoji: '🇬🇧',
       image: 'https://images.pexels.com/photos/221457/pexels-photo-221457.jpeg?auto=compress&cs=tinysrgb&w=800'
     },
     date: '2024-10-10',
     price: '$3,200',
     status: 'Available',
-    description: 'Singapore Airlines direct to London. Award-winning service and comfort.'
   }
 ];
 
 const PlaneTicketsPreview = () => {
   return (
     <div className="my-12 max-w-7xl flex flex-col justify-center items-center mx-auto">
-      <h2 className="text-2xl font-bold mb-6 text-gray-900">Featured Plane Tickets</h2>
+      <div className="text-center mb-16">
+        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          Featured Plane Tickets
+        </h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Journey beyond the expected with our expertly selected flights. Whether you seek last-minute escapes,
+          premium cabins, or hidden-gem destinations, we secure the best routes and rates—turning your
+          travel dreams into seamless reality. Your perfect departure awaits        </p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {tickets.slice(0, 3).map((ticket) => (
           <div key={ticket.id} className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:-translate-y-2">
             <div className="relative h-48 overflow-hidden">
               <img
                 src={ticket.to.image}
-                alt={`${ticket.to.name}`}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -93,8 +85,7 @@ const PlaneTicketsPreview = () => {
                 </div>
               </div>
               <div className="absolute bottom-4 left-4 text-white">
-                <div className="text-2xl font-bold">{ticket.to.name}</div>
-                <div className="text-sm opacity-90">{ticket.to.country}</div>
+                <div className="text-2xl font-bold opacity-90">{ticket.to.country}</div>
               </div>
             </div>
 

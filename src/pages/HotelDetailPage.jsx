@@ -16,7 +16,6 @@ const hotels = [
       'https://images.pexels.com/photos/1461974/pexels-photo-1461974.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
       'https://images.pexels.com/photos/2363/france-landmark-lights-night.jpg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
     ],
-    amenities: ['Free WiFi', 'Parking', 'Restaurant', 'Spa', 'Pool'],
     description: 'Luxury hotel in the heart of Paris with stunning city views. Enjoy world-class amenities and Michelin-starred dining.',
     rating: 5,
   },
@@ -32,7 +31,6 @@ const hotels = [
       'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
       'https://images.pexels.com/photos/1461974/pexels-photo-1461974.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
     ],
-    amenities: ['Free WiFi', 'Restaurant', 'Spa', 'Fitness Center'],
     description: 'Contemporary luxury with traditional Japanese hospitality. Award-winning spa and gourmet dining.',
     rating: 5
   },
@@ -48,7 +46,6 @@ const hotels = [
       'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
       'https://images.pexels.com/photos/1461974/pexels-photo-1461974.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
     ],
-    amenities: ['Free WiFi', 'Beach Access', 'Pool', 'Spa', 'Restaurant'],
     description: 'Tropical paradise with private beach and luxury amenities. Perfect for a relaxing getaway.',
     rating: 5
   },
@@ -64,7 +61,6 @@ const hotels = [
       'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
       'https://images.pexels.com/photos/1461974/pexels-photo-1461974.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
     ],
-    amenities: ['Game Drives', 'Restaurant', 'Bar', 'Cultural Tours'],
     description: 'Authentic safari experience with luxury tented accommodation. See the Big Five up close.',
     rating: 4
   },
@@ -80,7 +76,6 @@ const hotels = [
       'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
       'https://images.pexels.com/photos/1461974/pexels-photo-1461974.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
     ],
-    amenities: ['Mountain Views', 'Restaurant', 'Spa', 'Guided Tours'],
     description: 'Historic hotel with direct access to Machu Picchu. Enjoy mountain views and gourmet cuisine.',
     rating: 4
   },
@@ -96,7 +91,6 @@ const hotels = [
       'https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
       'https://images.pexels.com/photos/1461974/pexels-photo-1461974.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop'
     ],
-    amenities: ['Aurora Views', 'Hot Tub', 'Restaurant', 'Observatory'],
     description: 'Perfect for Northern Lights viewing with luxury comfort. Stargazing and hot tubs included.',
     rating: 4
   }
@@ -184,33 +178,7 @@ const HotelDetailPage = () => {
                   <div className="text-gray-600">{hotel.rating} Stars</div>
                 </div>
               </div>
-              <div className="flex items-center">
-                <Check className="h-5 w-5 text-green-500 mr-3" />
-                <div>
-                  <div className="font-semibold text-gray-900">Top Amenity</div>
-                  <div className="text-gray-600">{hotel.amenities[0]}</div>
-                </div>
-              </div>
-              <div className="flex items-center">
-                <Coffee className="h-5 w-5 text-purple-600 mr-3" />
-                <div>
-                  <div className="font-semibold text-gray-900">Restaurant</div>
-                  <div className="text-gray-600">{hotel.amenities.includes('Restaurant') ? 'Available' : 'N/A'}</div>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Amenities</h2>
-          <div className="flex flex-wrap gap-4">
-            {hotel.amenities.map((amenity, i) => (
-              <div key={i} className="flex items-center bg-gray-100 text-gray-700 text-base px-4 py-2 rounded-full">
-                {getAmenityIcon(amenity)}
-                <span className="ml-2">{amenity}</span>
-              </div>
-            ))}
           </div>
         </div>
 

@@ -18,8 +18,6 @@ const ToursPage = () => {
         title: 'Romantic Paris Adventure',
         location: 'France',
         duration: '7 Days',
-        rating: 4.9,
-        reviews: 324,
         price: 2899,
         priceDisplay: '$2,899',
         image: 'https://images.pexels.com/photos/161853/eiffel-tower-france-landmark-tower-161853.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -31,8 +29,6 @@ const ToursPage = () => {
         title: 'Swiss Alps Experience',
         location: 'Switzerland',
         duration: '6 Days',
-        rating: 4.8,
-        reviews: 256,
         price: 3299,
         priceDisplay: '$3,299',
         image: 'https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -44,8 +40,6 @@ const ToursPage = () => {
         title: 'Italian Renaissance Tour',
         location: 'Italy',
         duration: '10 Days',
-        rating: 4.7,
-        reviews: 412,
         price: 3599,
         priceDisplay: '$3,599',
         image: 'https://images.pexels.com/photos/2064827/pexels-photo-2064827.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -57,8 +51,6 @@ const ToursPage = () => {
         title: 'Greek Island Hopping',
         location: 'Greece',
         duration: '8 Days',
-        rating: 4.6,
-        reviews: 298,
         price: 2499,
         priceDisplay: '$2,499',
         image: 'https://images.pexels.com/photos/1010657/pexels-photo-1010657.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -72,8 +64,6 @@ const ToursPage = () => {
         title: 'Ancient Temples of Japan',
         location: 'Japan',
         duration: '10 Days',
-        rating: 4.8,
-        reviews: 256,
         price: 3499,
         priceDisplay: '$3,499',
         image: 'https://images.pexels.com/photos/161401/fushimi-inari-taisha-shrine-kyoto-japan-temple-161401.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -85,8 +75,6 @@ const ToursPage = () => {
         title: 'Tropical Paradise Bali',
         location: 'Indonesia',
         duration: '6 Days',
-        rating: 4.7,
-        reviews: 189,
         price: 1799,
         priceDisplay: '$1,799',
         image: 'https://images.pexels.com/photos/2166559/pexels-photo-2166559.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -98,8 +86,6 @@ const ToursPage = () => {
         title: 'Thailand Adventure',
         location: 'Thailand',
         duration: '9 Days',
-        rating: 4.5,
-        reviews: 367,
         price: 2199,
         priceDisplay: '$2,199',
         image: 'https://images.pexels.com/photos/1007426/pexels-photo-1007426.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -113,8 +99,6 @@ const ToursPage = () => {
         title: 'Machu Picchu Explorer',
         location: 'Peru',
         duration: '9 Days',
-        rating: 4.8,
-        reviews: 278,
         price: 2699,
         priceDisplay: '$2,699',
         image: 'https://images.pexels.com/photos/259967/pexels-photo-259967.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -126,8 +110,6 @@ const ToursPage = () => {
         title: 'Canadian Rockies Adventure',
         location: 'Canada',
         duration: '8 Days',
-        rating: 4.7,
-        reviews: 198,
         price: 2399,
         priceDisplay: '$2,399',
         image: 'https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -141,8 +123,6 @@ const ToursPage = () => {
         title: 'Safari Adventure Kenya',
         location: 'Kenya',
         duration: '8 Days',
-        rating: 4.9,
-        reviews: 143,
         price: 3299,
         priceDisplay: '$3,299',
         image: 'https://images.pexels.com/photos/631317/pexels-photo-631317.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -154,8 +134,6 @@ const ToursPage = () => {
         title: 'Egyptian Wonders',
         location: 'Egypt',
         duration: '7 Days',
-        rating: 4.6,
-        reviews: 234,
         price: 2199,
         priceDisplay: '$2,199',
         image: 'https://images.pexels.com/photos/71241/pexels-photo-71241.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -191,12 +169,8 @@ const ToursPage = () => {
         return a.price - b.price;
       case 'price-high':
         return b.price - a.price;
-      case 'rating':
-        return b.rating - a.rating;
       case 'duration':
         return parseInt(a.duration) - parseInt(b.duration);
-      default:
-        return b.reviews - a.reviews;
     }
   });
 
@@ -264,7 +238,6 @@ const ToursPage = () => {
               <option value="popular">Most Popular</option>
               <option value="price-low">Price: Low to High</option>
               <option value="price-high">Price: High to Low</option>
-              <option value="rating">Highest Rated</option>
               <option value="duration">Duration</option>
             </select>
           </div>
@@ -292,8 +265,6 @@ const ToursPage = () => {
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center text-yellow-500 text-sm">
                     <Star className="h-4 w-4 fill-current mr-1" />
-                    <span className="font-semibold">{tour.rating}</span>
-                    <span className="text-gray-500 ml-1">({tour.reviews} reviews)</span>
                   </div>
                 </div>
                 

@@ -12,7 +12,6 @@ export default function TourDetailPage ()  {
       title: 'Romantic Paris Adventure',
       country: 'France',
       duration: '7 Days',
-      groupSize: '12-16 people',
       price: '$2,899',
       images: [
         'https://images.pexels.com/photos/161853/eiffel-tower-france-landmark-tower-161853.jpeg?auto=compress&cs=tinysrgb&w=1200&h=800&fit=crop',
@@ -22,7 +21,6 @@ export default function TourDetailPage ()  {
       ],
       highlights: ['Eiffel Tower', 'Louvre Museum', 'Seine River Cruise', 'Montmartre', 'Arc de Triomphe', 'Notre-Dame'],
       hotel: 'The Ritz Carlton Paris',
-      guide: 'Marie Dubois',
       transport: 'Luxury Coach',
       description: 'Experience the romance and elegance of Paris with visits to iconic landmarks, world-class museums, and charming neighborhoods. This comprehensive tour combines must-see attractions with hidden gems, offering an authentic Parisian experience.',
       included: [
@@ -34,50 +32,43 @@ export default function TourDetailPage ()  {
         'Seine River cruise',
         'Metro passes for all days'
       ],
-      notIncluded: [
-        'International flights',
-        'Travel insurance',
-        'Lunches (except where specified)',
-        'Personal expenses',
-        'Tips for guide and driver'
-      ],
-      itinerary: [
-        {
-          day: 1,
-          title: 'Arrival in Paris',
-          description: 'Arrive at Charles de Gaulle Airport. Transfer to hotel and evening welcome dinner.'
-        },
-        {
-          day: 2,
-          title: 'Classic Paris',
-          description: 'Visit Eiffel Tower, Arc de Triomphe, and Champs-Élysées. Evening Seine River cruise.'
-        },
-        {
-          day: 3,
-          title: 'Art & Culture',
-          description: 'Full day at the Louvre Museum and walk through Tuileries Garden.'
-        },
-        {
-          day: 4,
-          title: 'Montmartre & Sacré-Cœur',
-          description: 'Explore the artistic quarter of Montmartre and visit Sacré-Cœur Basilica.'
-        },
-        {
-          day: 5,
-          title: 'Versailles Day Trip',
-          description: 'Full day excursion to the Palace of Versailles and its magnificent gardens.'
-        },
-        {
-          day: 6,
-          title: 'Latin Quarter & Notre-Dame',
-          description: 'Discover the Latin Quarter, Panthéon, and Notre-Dame Cathedral area.'
-        },
-        {
-          day: 7,
-          title: 'Departure',
-          description: 'Free morning for last-minute shopping. Transfer to airport for departure.'
-        }
-      ]
+      // itinerary: [
+      //   {
+      //     day: 1,
+      //     title: 'Arrival in Paris',
+      //     description: 'Arrive at Charles de Gaulle Airport. Transfer to hotel and evening welcome dinner.'
+      //   },
+      //   {
+      //     day: 2,
+      //     title: 'Classic Paris',
+      //     description: 'Visit Eiffel Tower, Arc de Triomphe, and Champs-Élysées. Evening Seine River cruise.'
+      //   },
+      //   {
+      //     day: 3,
+      //     title: 'Art & Culture',
+      //     description: 'Full day at the Louvre Museum and walk through Tuileries Garden.'
+      //   },
+      //   {
+      //     day: 4,
+      //     title: 'Montmartre & Sacré-Cœur',
+      //     description: 'Explore the artistic quarter of Montmartre and visit Sacré-Cœur Basilica.'
+      //   },
+      //   {
+      //     day: 5,
+      //     title: 'Versailles Day Trip',
+      //     description: 'Full day excursion to the Palace of Versailles and its magnificent gardens.'
+      //   },
+      //   {
+      //     day: 6,
+      //     title: 'Latin Quarter & Notre-Dame',
+      //     description: 'Discover the Latin Quarter, Panthéon, and Notre-Dame Cathedral area.'
+      //   },
+      //   {
+      //     day: 7,
+      //     title: 'Departure',
+      //     description: 'Free morning for last-minute shopping. Transfer to airport for departure.'
+      //   }
+      // ]
     },
   ];
   const tour = tours.find(t => t.id === parseInt(id || '1')) || tours[0];
@@ -139,7 +130,6 @@ export default function TourDetailPage ()  {
 
               <div className="mb-4 text-gray-700 text-base">
                 <strong>Hotel:</strong> {tour.hotel}<br/>
-                <strong>Guide:</strong> {tour.guide}<br/>
                 <strong>Transport:</strong> {tour.transport}
               </div>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
@@ -196,21 +186,9 @@ export default function TourDetailPage ()  {
               ))}
             </div>
           </div>
-          
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Not Included</h2>
-            <div className="space-y-3">
-              {tour.notIncluded.map((item, index) => (
-                <div key={index} className="flex items-start">
-                  <div className="h-5 w-5 border-2 border-red-300 rounded mr-3 mt-0.5 flex-shrink-0"></div>
-                  <span className="text-gray-700">{item}</span>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Day by Day Itinerary</h2>
           <div className="space-y-6">
             {tour.itinerary.map((day, index) => (
@@ -227,7 +205,7 @@ export default function TourDetailPage ()  {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
         <div className="bg-blue-600 rounded-2xl p-8 text-center text-white">
           <h3 className="text-2xl font-bold mb-4">Ready to Experience Paris?</h3>

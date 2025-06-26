@@ -9,8 +9,8 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div onClick={() => window.location.href = '/'} className="flex items-center space-x-2 cursor-pointer">
+            <span className="text-2xl font-bold text-gray-900">Royal Trip</span>
             <Plane className="h-8 w-8 text-blue-600" />
-            <span className="text-2xl font-bold text-gray-900">Wanderlust</span>
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">
@@ -18,19 +18,9 @@ const Header = () => {
             <a href="/hotels" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Hotels</a>
             <a href="/visa-services" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Visa</a>
             <a href="/plane-tickets" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Plane Tickets</a>
+            <a href="/about" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">About Us</a>
             <a href="/contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
           </nav>
-
-          <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-1 text-sm text-gray-600">
-              <Phone className="h-4 w-4" />
-              <span>+1 (555) 123-4567</span>
-            </div>
-            <div className="flex items-center space-x-1 text-sm text-gray-600">
-              <Mail className="h-4 w-4" />
-              <span>info@wanderlust.com</span>
-            </div>
-          </div>
 
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -47,6 +37,7 @@ const Header = () => {
               <a href="/hotels" className="text-gray-700 hover:text-blue-600 font-medium">Hotels</a>
               <a href="/visa-services" className="text-gray-700 hover:text-blue-600 font-medium">Visa</a>
               <a href="/plane-tickets" className="text-gray-700 hover:text-blue-600 font-medium">Plane Tickets</a>
+              <a href="/about" className="text-gray-700 hover:text-blue-600 font-medium">About Us</a>
               <a href="/contact" className="text-gray-700 hover:text-blue-600 font-medium">Contact</a>
             </nav>
           </div>

@@ -16,6 +16,8 @@ import HotelDetailPage from './pages/HotelDetailPage';
 import PlaneTicketsPage from './pages/PlaneTicketsPage';
 import PlaneTicketDetailPage from './pages/PlaneTicketDetailPage';
 import PlaneTicketsPreview from './components/PlaneTicketsPreview';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 function HomePage() {
   return (
@@ -55,6 +57,8 @@ function App() {
         <Route path="/visa/:id" element={<VisaDetailPage />} />
         <Route path="/plane-tickets" element={<PlaneTicketsPage />} />
         <Route path="/plane-ticket/:id" element={<PlaneTicketDetailPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </Router>
   );

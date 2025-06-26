@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <Plane className="h-8 w-8 text-blue-400" />
-              <span className="text-2xl font-bold">Wanderlust</span>
+              <span className="text-2xl font-bold">Royal Trip</span>
             </div>
             <p className="text-gray-400">
               Your trusted partner for unforgettable travel experiences around the world. 
@@ -29,8 +29,8 @@ const Footer = () => {
               <li><a href="#hotels" className="text-gray-400 hover:text-white transition-colors">Hotels</a></li>
               <li><a href="#visa" className="text-gray-400 hover:text-white transition-colors">Visa Services</a></li>
               <li><a href="#plane-tickets" className="text-gray-400 hover:text-white transition-colors">Plane Tickets</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+              <li><a href="/about" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+              <li><a href="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
 
@@ -43,7 +43,7 @@ const Footer = () => {
               </div>
               <div className="flex justify-start  items-center gap-2">
                 <Mail className="h-5 w-5 text-blue-400" />
-                <span className="text-gray-400">info@wanderlust.com</span>
+                <span className="text-gray-400">info@Royal Trip.com</span>
               </div>
               <div className="flex justify-start items-start gap-2">
                 <MapPin className="h-5 w-5 text-blue-400 mt-0.5" />
@@ -60,7 +60,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Wanderlust Travel Agency. All rights reserved.
+              © 2025 Royal Trip Travel Agency. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>

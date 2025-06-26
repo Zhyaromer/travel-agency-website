@@ -9,14 +9,14 @@ const tickets = [
     id: 1,
     airline: 'Emirates',
     from: {
-      code: 'DXB',
+      code: 'Dubai',
       name: 'Dubai International Airport',
       country: 'United Arab Emirates',
       flag: 'https://flagcdn.com/w40/ae.png',
       flagEmoji: '🇦🇪'
     },
     to: {
-      code: 'JFK',
+      code: 'New York',
       name: 'John F. Kennedy International Airport',
       country: 'United States',
       flag: 'https://flagcdn.com/w40/us.png',
@@ -32,14 +32,14 @@ const tickets = [
     id: 2,
     airline: 'Qatar Airways',
     from: {
-      code: 'DOH',
+      code: 'Doha',
       name: 'Hamad International Airport',
       country: 'Qatar',
       flag: 'https://flagcdn.com/w40/qa.png',
       flagEmoji: '🇶🇦'
     },
     to: {
-      code: 'LHR',
+      code: 'London',
       name: 'London Heathrow Airport',
       country: 'United Kingdom',
       flag: 'https://flagcdn.com/w40/gb.png',
@@ -55,14 +55,14 @@ const tickets = [
     id: 3,
     airline: 'Singapore Airlines',
     from: {
-      code: 'SIN',
+      code: 'Singapore',
       name: 'Singapore Changi Airport',
       country: 'Singapore',
       flag: 'https://flagcdn.com/w40/sg.png',
       flagEmoji: '🇸🇬'
     },
     to: {
-      code: 'LHR',
+      code: 'London',
       name: 'London Heathrow Airport',
       country: 'United Kingdom',
       flag: 'https://flagcdn.com/w40/gb.png',
@@ -78,14 +78,14 @@ const tickets = [
     id: 4,
     airline: 'British Airways',
     from: {
-      code: 'LHR',
+      code: 'London',
       name: 'London Heathrow Airport',
       country: 'United Kingdom',
       flag: 'https://flagcdn.com/w40/gb.png',
       flagEmoji: '🇬🇧'
     },
     to: {
-      code: 'CDG',
+      code: 'Paris',
       name: 'Charles de Gaulle Airport',
       country: 'France',
       flag: 'https://flagcdn.com/w40/fr.png',
@@ -101,14 +101,14 @@ const tickets = [
     id: 5,
     airline: 'Lufthansa',
     from: {
-      code: 'FRA',
+      code: 'Frankfurt',
       name: 'Frankfurt Airport',
       country: 'Germany',
       flag: 'https://flagcdn.com/w40/de.png',
       flagEmoji: '🇩🇪'
     },
     to: {
-      code: 'JFK',
+      code: 'New York',
       name: 'John F. Kennedy International Airport',
       country: 'United States',
       flag: 'https://flagcdn.com/w40/us.png',
@@ -124,14 +124,14 @@ const tickets = [
     id: 6,
     airline: 'Air France',
     from: {
-      code: 'CDG',
+      code: 'Paris',
       name: 'Charles de Gaulle Airport',
       country: 'France',
       flag: 'https://flagcdn.com/w40/fr.png',
       flagEmoji: '🇫🇷'
     },
     to: {
-      code: 'NRT',
+      code: 'Narita',
       name: 'Narita International Airport',
       country: 'Japan',
       flag: 'https://flagcdn.com/w40/jp.png',
@@ -146,8 +146,8 @@ const tickets = [
 ];
 
 const airlines = Array.from(new Set(tickets.map(t => t.airline)));
-const fromAirports = Array.from(new Set(tickets.map(t => t.from.name)));
-const toAirports = Array.from(new Set(tickets.map(t => t.to.name)));
+const fromAirports = Array.from(new Set(tickets.map(t => t.from.code)));
+const toAirports = Array.from(new Set(tickets.map(t => t.to.code)));
 
 const PlaneTicketsPage = () => {
   const [search, setSearch] = useState('');
@@ -158,13 +158,13 @@ const PlaneTicketsPage = () => {
 
   const filtered = tickets.filter(ticket =>
     (selectedAirline === '' || ticket.airline === selectedAirline) &&
-    (selectedFrom === '' || ticket.from.name === selectedFrom) &&
-    (selectedTo === '' || ticket.to.name === selectedTo) &&
+    (selectedFrom === '' || ticket.from.code === selectedFrom) &&
+    (selectedTo === '' || ticket.to.code === selectedTo) &&
     (selectedDate === '' || ticket.date === selectedDate) &&
     (
       ticket.airline.toLowerCase().includes(search.toLowerCase()) ||
-      ticket.from.name.toLowerCase().includes(search.toLowerCase()) ||
-      ticket.to.name.toLowerCase().includes(search.toLowerCase())
+      ticket.from.code.toLowerCase().includes(search.toLowerCase()) ||
+      ticket.to.code.toLowerCase().includes(search.toLowerCase())
     )
   );
 
@@ -270,7 +270,6 @@ const PlaneTicketsPage = () => {
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={ticket.to.image}
-                  alt={`${ticket.to.name}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -280,8 +279,7 @@ const PlaneTicketsPage = () => {
                   </div>
                 </div>
                 <div className="absolute bottom-4 left-4 text-white">
-                  <div className="text-2xl font-bold">{ticket.to.name}</div>
-                  <div className="text-sm opacity-90">{ticket.to.country}</div>
+                  <div className="text-2xl font-bold opacity-90">{ticket.to.country}</div>
                 </div>
               </div>
 

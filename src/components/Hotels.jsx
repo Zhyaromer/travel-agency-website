@@ -11,7 +11,6 @@ const Hotels = () => {
       reviews: 1247,
       price: '$650',
       image: 'https://images.pexels.com/photos/1134176/pexels-photo-1134176.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      amenities: ['Free WiFi', 'Parking', 'Restaurant', 'Spa', 'Pool'],
       description: 'Luxury hotel in the heart of Paris with stunning city views'
     },
     {
@@ -22,7 +21,6 @@ const Hotels = () => {
       reviews: 892,
       price: '$580',
       image: 'https://images.pexels.com/photos/261102/pexels-photo-261102.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      amenities: ['Free WiFi', 'Restaurant', 'Spa', 'Fitness Center'],
       description: 'Contemporary luxury with traditional Japanese hospitality'
     },
     {
@@ -33,7 +31,6 @@ const Hotels = () => {
       reviews: 1089,
       price: '$420',
       image: 'https://images.pexels.com/photos/1268855/pexels-photo-1268855.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      amenities: ['Free WiFi', 'Beach Access', 'Pool', 'Spa', 'Restaurant'],
       description: 'Tropical paradise with private beach and luxury amenities'
     },
     {
@@ -44,7 +41,6 @@ const Hotels = () => {
       reviews: 456,
       price: '$350',
       image: 'https://images.pexels.com/photos/6138086/pexels-photo-6138086.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      amenities: ['Game Drives', 'Restaurant', 'Bar', 'Cultural Tours'],
       description: 'Authentic safari experience with luxury tented accommodation'
     },
     {
@@ -55,7 +51,6 @@ const Hotels = () => {
       reviews: 623,
       price: '$480',
       image: 'https://images.pexels.com/photos/2413613/pexels-photo-2413613.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      amenities: ['Mountain Views', 'Restaurant', 'Spa', 'Guided Tours'],
       description: 'Historic hotel with direct access to Machu Picchu'
     },
     {
@@ -66,7 +61,6 @@ const Hotels = () => {
       reviews: 387,
       price: '$320',
       image: 'https://images.pexels.com/photos/2166473/pexels-photo-2166473.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-      amenities: ['Aurora Views', 'Hot Tub', 'Restaurant', 'Observatory'],
       description: 'Perfect for Northern Lights viewing with luxury comfort'
     }
   ];
@@ -92,8 +86,7 @@ const Hotels = () => {
             Premium Hotel Collection
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Stay in carefully selected luxury hotels and resorts that offer
-            exceptional service and unforgettable experiences.
+           Indulge in the finest stays, handpicked for their unparalleled luxury and impeccable service. From iconic city retreats to secluded paradise resorts, each property promises extraordinary comfort and unforgettable moments—because where you stay should be just as remarkable as your journey.
           </p>
         </div>
 
@@ -121,15 +114,7 @@ const Hotels = () => {
                 <p className="text-gray-600 text-base mb-4 line-clamp-2">
                   {hotel.description}
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {hotel.amenities.slice(0, 4).map((amenity, index) => (
-                    <div key={index} className="flex items-center bg-gray-100 text-gray-700 text-xs px-3 py-1 rounded-full">
-                      {getAmenityIcon(amenity)}
-                      <span className="ml-1">{amenity}</span>
-                    </div>
-                  ))}
-                </div>
-                <Link to={`/hotel/${hotel.id}`} className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 text-center mt-auto">
+                <Link to={`/hotel/${hotel.id}`} className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200 text-center">
                   Explore More
                 </Link>
               </div>
