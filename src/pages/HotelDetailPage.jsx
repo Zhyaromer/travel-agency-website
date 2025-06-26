@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, MapPin, Check, Star, Wifi, Car, Coffee, Users, Share2 } from 'lucide-react';
+import { ArrowLeft, MapPin, Star, Wifi, Car, Coffee, Users, Share2 } from 'lucide-react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -160,7 +160,7 @@ const HotelDetailPage = () => {
               </div>
               <h1 className="text-4xl font-bold text-gray-900 mb-4">{hotel.name}</h1>
               <div className="flex items-center text-gray-600 mb-6">
-                <MapPin className="h-5 w-5 mr-2" />
+                <MapPin className="h-5 w-5 mr-2 text-red-500" />
                 <span>{hotel.location}</span>
               </div>
               <div className="mb-4 text-gray-700 text-base">

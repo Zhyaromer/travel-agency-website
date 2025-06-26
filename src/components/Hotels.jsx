@@ -1,4 +1,4 @@
-import { Wifi, Car, Coffee, ArrowRight, MapPin, Users } from 'lucide-react';
+import { Wifi, Car, Coffee, ArrowRight, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hotels = () => {

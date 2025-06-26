@@ -25,20 +25,20 @@ const ContactPage = () => {
         <div className="mb-8 space-y-4">
           <div className="flex flex-col justify-start items-start gap-2">
             <div className='flex flex-row items-center gap-2'>
-              <Phone className="h-5 w-5 text-yellow-400" />
+              <Phone className="h-5 w-5 text-green-500" />
               <span dir='ltr' className="text-black">0773 519 9595</span>
             </div>
             <div className='flex flex-row items-center gap-2'>
-              <Phone className="h-5 w-5 text-yellow-400" />
+              <Phone className="h-5 w-5 text-green-500" />
               <span dir='ltr' className="text-black">0773 507 9797</span>
             </div>
             <div className='flex flex-row items-center gap-2'>
-              <Phone className="h-5 w-5 text-yellow-400" />
+              <Phone className="h-5 w-5 text-green-500" />
               <span dir='ltr' className="text-black">0773 222 4000</span>
             </div>
           </div>
           <div className="flex items-center gap-2 text-gray-700"><Mail className="h-5 w-5 text-yellow-600" />royal.trip21@gmail.com</div>
-          <div className="flex items-center gap-2 text-gray-700"><MapPin className="h-5 w-5 text-yellow-600" /> Slemani Ashti  Infront of Blnd School</div>
+          <div className="flex items-center gap-2 text-gray-700"><MapPin className="h-5 w-5 text-red-600" /> Slemani Ashti  Infront of Blnd School</div>
           <div className="flex gap-4 pt-2">
             <a href="https://www.facebook.com/royaltrip2021" target="_blank" rel="noopener noreferrer"><Facebook className="h-6 w-6 text-gray-400 hover:text-yellow-600 transition-colors" /></a>
             <a href="https://www.linkedin.com/company/royal-trip-travel/" target="_blank" rel="noopener noreferrer"><Linkedin className="h-6 w-6 text-gray-400 hover:text-yellow-600 transition-colors" /></a>

@@ -193,7 +193,7 @@ const HotelsPage = () => {
                   {hotel.name}
                 </h3>
                 <div className="flex items-center text-gray-600 mb-3">
-                  <MapPin className="h-4 w-4 mr-1" />
+                  <MapPin className="h-4 w-4 mr-1 text-red-500" />
                   <span className="text-sm">{hotel.location}</span>
                 </div>
                 <p className="text-gray-600 text-sm mb-4 line-clamp-2">
